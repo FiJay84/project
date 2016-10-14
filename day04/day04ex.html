@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Day04ex</title>
+  </head>
+  <body>
+
+    <form>
+      <input type="text">
+      <input type="password">
+      <input type="email">
+      <input type="submit">
+    </form>
+
+    <br>
+    <br>
+
+    <!--
+    'action' attribute는 어느 서버에 데이터가 보내질지를 지정해줍니다
+    'method' attribute는 어떠한 HTTP method들인지 정해줍니다(GET이나 POST)
+    -->
+
+    <form action="form-responses/new" method="POST">
+
+      <input type="text" name="firstname" value="default" size="100" autofocus>
+      <input type="password" name="pswd">
+      <input type="email" name="userEmail" placeholder="hello@site.com">
+
+      <br>
+      <br>
+
+      <input type="radio" name="weired" value="code-blue" checked>
+      <span>이것을 고르세요!</span>
+      <br>
+      <br>
+
+      <input type="checkbox" name="option" value="trusting" checked>
+      약관에 전부 동의합니다.
+      <br>
+      <br>
+      <input type="checkbox" name="option" value="skeptical" disabled>
+      잠시만요. 이건 뭐죠?
+      <br>
+      <br>
+
+      <select name="car">
+        <optgroup label="스위스 자동차">
+          <option value="boring">Volvo</option>
+          <option value="cool">Honda</option>
+        </optgroup>
+      </select>
+
+      <textarea name="user_message" rows="8" cols="40">
+      </textarea>
+
+      <input type="submit">
+    </form>
+
+    <!--
+    아래는 네트워크 요청이 보낼 때 생성된 "POST" method의 body입니다.
+    firstname=user+numero+uno&pswd=secretstuff&userEmail=me%40site.com&weird=code-blue&optin=sucker&car=boring&userMessage=what+about++++spaces%3F%0D%0Aand%0D%0A+++indentation%3F-->
+
+  </body>
+</html>

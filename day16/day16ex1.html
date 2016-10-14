@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  <style>
+
+  </style>
+  </head>
+
+  <body>
+
+    <div id="show">
+
+    </div>
+
+    <a>
+      seoul
+    </a>
+    <a>
+      busan
+    </a>
+
+    <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    <script>
+    // $.ajax({
+    //   method: 'GET',
+    //   url: 'http://api.openweathermap.org/data/2.5/weather?q=San%20Francisco&mode=json&units=imperial&APPID=50209915e0bb37dacb88e9ee4f70d10b',
+    //   success: function(weather_data){
+    //     console.log(weather_data)
+    //   }
+    // })
+    //
+    // var to_be_run_on_server_response = function(weather_data){
+    //   $('#container').append(weather_data.main.temp)
+    // }
+    //
+    //
+    // $.get('http://api.openweathermap.org/data/2.5/weather?q=San%20Francisco&mode=json&units=imperial&APPID=50209915e0bb37dacb88e9ee4f70d10b').then(to_be_run_on_server_response)
+    //
+    // // var sever_response= function(weather){
+    // //   $('#show').
+    // // }
+    var callback = function(event){
+      event.preventDefault();
+
+      var text = $(this).text();
+      $('#show').empty();
+
+      $.get('http://api.openweathermap.org/data/2.5/weather?q=' + 'text' + '&mode=json&units=imperial&APPID=50209915e0bb37dacb88e9ee4f70d10b')
+      .then(function(weatherJson){
+        var c = ftoc(weatherJson.main.temp);
+        $('#show').text(c + ' C');
+      });
+      $('#show').html('<p>서버에서 data가지고 오는중 입니다. 로딩중</p>');
+    };
+    $('a').on('click', callback);
+
+    function ftoc(felinhit){
+      var celcius = (felinhit -32 ) * 5/9;
+      return celcius;
+    }
+    </script>
+  </body>
+</html>

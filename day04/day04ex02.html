@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Day04ex02</title>
+
+    <style>
+
+    input {
+      padding: 6px 12px 6px 12px;
+      border: 1px solid #665544;
+      color: #ffffff;
+    }
+
+    input.submit:hover {
+      background-color: #665544;
+    }
+
+    input.submit:active {
+      background-color: red;
+    }
+
+    input.text {
+      color: #cccccc;
+    }
+
+    input.text:focus {
+      color: #665544;
+    }
+
+
+
+    </style>
+
+  </head>
+  <body>
+
+    <form action="form-response/new" method="POST">
+
+      <div class="signon">
+        <input type="email" name="id" placeholder="아이디(이메일)" size="30" autofocus autocomplete="on">
+        <br>
+        <input type="password" name="password" placeholder="패스워드" size="30">
+        <br>
+
+      </div>
+
+      <br>
+      <hr>
+      <br>
+
+      <div class="job">
+        <input type="radio" name="position" value="student" checked>
+        <span>Student</span>
+        <br>
+        <input type="radio" name="position" value="household">
+        <span>Household</span>
+        <br>
+        <input type="radio" name="position" value="worker">
+        <span>Worker</span>
+        <br>
+      </div>
+
+      <br>
+      <hr>
+
+      <div class="car">
+        <input type="checkbox" name="car type" value="sedan">
+        <span>SEDAN</span>
+
+        <br>
+
+        <input type="checkbox" name="car type" value="suv">
+        <span>SUV</sapn>
+
+        <br>
+
+        <input type="checkbox" name="car type" value="pick-up">
+        <span>Pick-Up Truck</span>
+
+      </div>
+
+      <div class="car brand">
+        <select name="brand">
+          <optgroup label="german car">
+            <option value="bmw">BMW</option>
+
+            <br>
+
+            <option value="benz">BENZ</option>
+
+            <br>
+
+            <option value="volksvargen">Volksvargen</option>
+          </optgroup>
+        </select>
+      </div>
+      <br>
+
+      <textarea name="user_message" rows="8" cols="40" placeholder="Message">
+      </textarea>
+
+      <br>
+      <hr>
+
+      <input type="color" name="color">
+      <br>
+      <input type="date" name="date">
+      <br>
+      <input type="datetime" name="datetime">
+      <br>
+      <input type="datetime-local" name="datetime-local">
+      <br>
+      <input type="file" name="file">
+      <br>
+      <input type="email" name="email">
+      <br>
+      <input type="month" name="month">
+      <br>
+      <input type="number" name="number">
+      <br>
+      <input type="range" name="range">
+      <br>
+      <input type="search" name="search">
+      <br>
+      <input type="tel" name="name">
+      <br>
+      <input type="time" name="time">
+      <br>
+      <input type="url" name="url">
+      <br>
+      <input type="week" name="week">
+      <br>
+      <hr>
+      <input type="text" name="country_code" pattern="[A-Za-z]{3}">
+      <br>
+      <hr>
+
+
+
+
+
+      <input type="submit">
+
+      <br>
+      <hr>
+
+    </form>
+
+  </body>
+</html>
